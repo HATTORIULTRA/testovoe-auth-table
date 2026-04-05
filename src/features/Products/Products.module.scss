@@ -1,0 +1,15 @@
+.wrapper {
+  padding: 30px 44px;
+  background-color: #fff;
+
+  .title {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 54px;
+
+    .buttons {
+      display: flex;
+      gap: 8px;
+    }
+  }
+}

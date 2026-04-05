@@ -1,17 +1,17 @@
-import { Button } from 'antd';
-import { useEffect } from 'react';
-import { getProducts } from '../features/Products/model/slice.ts';
-import { useAppDispatch } from '../shared/hooks.ts';
+import Products from '../features/Products';
+import Search from '../features/components/Search.tsx';
+import useProducts from '../features/Products/model/useProducts.tsx';
+import ProgressBar from '../widgets/ProgressBar/ProgressBar.tsx';
 
 function App() {
-  const dispatch = useAppDispatch();
-  useEffect(() => {
-    dispatch(getProducts());
-  }, []);
+  const { searchValue, setSearchValue, handleTableChange } = useProducts();
+
   return (
-    <>
-      <Button>awdawda</Button>
-    </>
+    <div>
+      <ProgressBar />
+      <Search value={searchValue} onChange={setSearchValue} />
+      <Products handleTableChange={handleTableChange} />
+    </div>
   );
 }
 
