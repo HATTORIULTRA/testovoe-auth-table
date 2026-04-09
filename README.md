@@ -3,7 +3,7 @@
 Веб-приложение для управления товарами с функциями авторизации, сортировки, поиска и добавления новых позиций. Реализовано с использованием современного стека React + TypeScript + Ant Design.
 
 ## Деплой
- - Ссылка: [testovoe-auth-table](https://github.com/hattoriultra](https://testovoe-auth-table.vercel.app/)
+ - Ссылка: [testovoe-auth-table](https://testovoe-auth-table.vercel.app/)
 
 ## 📋 Содержание
 
