@@ -263,7 +263,7 @@ const handleSearch = useCallback(
 
 ## 📞 Контакты
 
-- GitHub: [@username](https://github.com/hattoriultra)
+- GitHub: [@hattoriultra](https://github.com/hattoriultra)
 
 ## 🔗 Полезные ссылки
 
