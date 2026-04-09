@@ -11,13 +11,15 @@
     "format": "prettier --write \"src/**/*.{ts,tsx,js,jsx,json,css,md}\""
   },
   "dependencies": {
+    "@ant-design/icons": "^6.1.1",
     "@reduxjs/toolkit": "^2.11.2",
     "antd": "^6.3.5",
     "axios": "^1.14.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "react-redux": "^9.2.0",
-    "react-router": "^7.13.2"
+    "react-router": "^7.13.2",
+    "sass": "^1.98.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.1",
