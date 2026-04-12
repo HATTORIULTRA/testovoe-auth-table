@@ -1,4 +1,4 @@
-import type { Product } from './model/types.ts';
+import type { Product } from '@/features/Products/model/types.ts';
 
 export const columns = [
   {

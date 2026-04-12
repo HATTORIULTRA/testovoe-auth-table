@@ -1,5 +1,5 @@
 import { Input } from 'antd';
-import s from './Search.module.scss';
+import s from '@/features/Products/components/Search.module.scss';
 
 type Props = {
   value: string;

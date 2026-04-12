@@ -1,7 +1,7 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-import type { ProductsResponse, ProductsState } from './types.ts';
-import instance from '../../../shared/api/instance.ts';
-import type { AppDispatch } from '../../../app/providers/store/store.ts';
+import type { ProductsResponse, ProductsState } from '@/features/Products/model/types.ts';
+import instance from '@/shared/api/instance.ts';
+import type { AppDispatch } from '@/app/providers/store/store.ts';
 
 export const getProducts = createAsyncThunk<
   ProductsResponse,

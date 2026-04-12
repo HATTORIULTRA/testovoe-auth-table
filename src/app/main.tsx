@@ -2,9 +2,9 @@
 import { createRoot } from 'react-dom/client';
 import { Provider } from 'react-redux';
 import { RouterProvider } from 'react-router';
-import { store } from './providers/store/store.ts';
-import { router } from './providers/root';
-import './index.css';
+import { store } from '@/app/providers/store/store.ts';
+import { router } from '@/app/providers/root';
+import '@/app/index.css';
 
 createRoot(document.getElementById('root')!).render(
   // <StrictMode>

@@ -1,9 +1,9 @@
 import { type Key, memo, useState } from 'react';
 import { Button, Table, type TableProps } from 'antd';
-import { useAppSelector } from '../../shared/hooks.ts';
-import type { Product } from './model/types.ts';
-import { columns } from './columns.tsx';
-import s from './Products.module.scss';
+import { useAppSelector } from '@/shared/hooks.ts';
+import type { Product } from '@/features/Products/model/types.ts';
+import { columns } from '@/features/Products/columns.tsx';
+import s from '@/features/Products/Products.module.scss';
 
 type ProductsProps = {
   handleTableChange: NonNullable<TableProps<Product>['onChange']>;

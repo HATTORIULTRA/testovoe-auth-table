@@ -1,16 +1,16 @@
 import type { FormProps } from 'antd';
 import { Button, Checkbox, Form, Input } from 'antd';
-import type { FieldType } from './model/types.ts';
-import { useAppDispatch } from '../../shared/hooks.ts';
-import { loginUser } from './model/slice.ts';
-import s from './Login.module.scss';
+import type { FieldType } from '@/features/Login/model/types.ts';
+import { useAppDispatch } from '@/shared/hooks.ts';
+import { loginUser } from '@/features/Login/model/slice.ts';
+import s from '@/features/Login/Login.module.scss';
 import {
   EyeInvisibleOutlined,
   LockOutlined,
   UserOutlined,
 } from '@ant-design/icons';
 import {Link} from "react-router";
-import {ROUTES} from "../../shared/routes.ts";
+import { ROUTES } from '@/shared/routes.ts';
 
 function Login() {
   const dispatch = useAppDispatch();

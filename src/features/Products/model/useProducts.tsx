@@ -1,8 +1,8 @@
-import { useAppDispatch, useAppSelector } from '../../../shared/hooks.ts';
+import { useAppDispatch, useAppSelector } from '@/shared/hooks.ts';
 import { useCallback, useEffect, useState } from 'react';
-import useDebounce from '../../../shared/useDebounce.tsx';
-import { getProducts } from './slice.ts';
-import type { Product } from './types.ts';
+import useDebounce from '@/shared/useDebounce.tsx';
+import { getProducts } from '@/features/Products/model/slice.ts';
+import type { Product } from '@/features/Products/model/types.ts';
 import type { TableProps } from 'antd';
 
 type HandleTableChange = NonNullable<TableProps<Product>['onChange']>;

@@ -1,7 +1,7 @@
 import { Navigate, Outlet } from 'react-router';
-import { ROUTES } from '../../shared/routes.ts';
-import { useAppSelector } from '../../shared/hooks.ts';
-import { getAccessToken } from '../../shared/token.helper.ts';
+import { ROUTES } from '@/shared/routes.ts';
+import { useAppSelector } from '@/shared/hooks.ts';
+import { getAccessToken } from '@/shared/token.helper.ts';
 
 function ProtectedLayout() {
   const { user, isAuthChecked } = useAppSelector((state) => state.auth);

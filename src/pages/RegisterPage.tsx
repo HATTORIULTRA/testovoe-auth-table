@@ -1,5 +1,5 @@
 import {Link} from "react-router";
-import {ROUTES} from "../shared/routes.ts";
+import { ROUTES } from '@/shared/routes.ts';
 
 
 function RegisterPage() {
