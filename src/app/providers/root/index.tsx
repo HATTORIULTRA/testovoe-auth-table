@@ -24,8 +24,8 @@ export const router = createBrowserRouter([
           },
           {
             path: ROUTES.REGISTER,
-            Component: RegisterPage
-          }
+            Component: RegisterPage,
+          },
         ],
       },
     ],

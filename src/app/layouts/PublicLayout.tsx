@@ -1,6 +1,6 @@
-import { useAppSelector } from '@/shared/hooks.ts';
 import { Navigate, Outlet } from 'react-router';
 import { ROUTES } from '@/shared/routes.ts';
+import { useAppSelector } from '@/shared/hooks.ts';
 
 function PublicLayout() {
   const { user, isAuthChecked } = useAppSelector((state) => state.auth);

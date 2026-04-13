@@ -1,5 +1,5 @@
 import { type Key, memo, useState } from 'react';
-import { Button, Table, type TableProps } from 'antd';
+import { Table, type TableProps } from 'antd';
 import { useAppSelector } from '@/shared/hooks.ts';
 import type { Product } from '@/features/Products/model/types.ts';
 import { columns } from '@/features/Products/columns.tsx';
@@ -16,8 +16,6 @@ const MemoizedProducts = memo(function Products({
   const data = useAppSelector((state) => state.products.data);
   const total = useAppSelector((state) => state.products.total);
 
-  const resetBtn = <img src="/reset.png" alt="reset-button" />;
-
   console.log('таблица перерисовалась');
 
   const onSelectChange = (newSelectedRowKeys: Key[]) => {
@@ -32,13 +30,6 @@ const MemoizedProducts = memo(function Products({
 
   return (
     <div className={s.wrapper}>
-      <div className={s.title}>
-        <h2>Все позиции</h2>
-        <div className={s.buttons}>
-          <Button>{resetBtn}</Button>
-          <Button>Добавить</Button>
-        </div>
-      </div>
       <Table<Product>
         rowSelection={rowSelection}
         onChange={handleTableChange}

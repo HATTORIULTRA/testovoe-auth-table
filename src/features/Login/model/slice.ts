@@ -1,6 +1,10 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import instance from '@/shared/api/instance.ts';
-import type { FieldType, IAuthState, UserData } from '@/features/Login/model/types.ts';
+import type {
+  FieldType,
+  IAuthState,
+  UserData,
+} from '@/features/Login/model/types.ts';
 
 export const loginUser = createAsyncThunk(
   'auth/loginUser',
