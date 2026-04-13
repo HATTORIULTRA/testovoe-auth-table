@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { getAccessToken } from '../token.helper.ts';
+import { getAccessToken } from '@/shared/token.helper.ts';
 
 const instance = axios.create({
   baseURL: 'https://dummyjson.com/',

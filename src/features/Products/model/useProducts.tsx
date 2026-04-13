@@ -1,9 +1,9 @@
-import { useAppDispatch, useAppSelector } from '../../../shared/hooks.ts';
 import { useCallback, useEffect, useState } from 'react';
-import useDebounce from '../../../shared/useDebounce.tsx';
-import { getProducts } from './slice.ts';
-import type { Product } from './types.ts';
 import type { TableProps } from 'antd';
+import { getProducts } from '@/features/Products/model/slice.ts';
+import type { Product } from '@/features/Products/model/types.ts';
+import { useAppDispatch, useAppSelector } from '@/shared/hooks.ts';
+import useDebounce from '@/shared/useDebounce.tsx';
 
 type HandleTableChange = NonNullable<TableProps<Product>['onChange']>;
 
@@ -31,6 +31,13 @@ function useProducts() {
     );
   }, []);
 
+  const handleResetTable = useCallback(() => {
+    setSearchValue('');
+    setSortBy('');
+    setOrder('');
+    dispatch(getProducts());
+  }, []);
+
   return {
     data,
     total,
@@ -39,6 +46,7 @@ function useProducts() {
     searchValue,
     setSearchValue,
     handleTableChange,
+    handleResetTable,
   };
 }
 

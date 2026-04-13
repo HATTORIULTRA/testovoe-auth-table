@@ -52,8 +52,10 @@ export interface ProductsResponse {
 }
 
 export interface ProductsState {
-  data: Product[] | [];
+  data: Product[];
   total: number;
   isLoading: boolean;
   progress: number;
 }
+
+export type TAddProduct = Pick<Product, "price" | "sku" | "title" | "brand">

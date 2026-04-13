@@ -1,7 +1,7 @@
-import { useAppDispatch, useAppSelector } from '../../shared/hooks.ts';
 import { useEffect } from 'react';
-import { setProgress } from '../../features/Products/model/slice.ts';
 import { Progress } from 'antd';
+import { setProgress } from '@/features/Products/model/slice.ts';
+import { useAppDispatch, useAppSelector } from '@/shared/hooks.ts';
 
 function ProgressBar() {
   const dispatch = useAppDispatch();

@@ -1,4 +1,4 @@
-import type { Product } from './model/types.ts';
+import type { Product } from '@/features/Products/model/types.ts';
 
 export const columns = [
   {
@@ -31,9 +31,13 @@ export const columns = [
     dataIndex: 'rating',
     key: 'rating',
     sorter: true,
+    render: (value: number) => {
+      const lowRating = value < 3 ? 'red' : 'inherit';
+      return <div style={{ color: lowRating }}>{value}</div>;
+    },
   },
   {
-    title: 'Цена',
+    title: 'Цена, ₽',
     dataIndex: 'price',
     key: 'price',
     sorter: true,

@@ -1,16 +1,16 @@
+import { Link } from 'react-router';
 import type { FormProps } from 'antd';
 import { Button, Checkbox, Form, Input } from 'antd';
-import type { FieldType } from './model/types.ts';
-import { useAppDispatch } from '../../shared/hooks.ts';
-import { loginUser } from './model/slice.ts';
-import s from './Login.module.scss';
 import {
   EyeInvisibleOutlined,
   LockOutlined,
   UserOutlined,
 } from '@ant-design/icons';
-import {Link} from "react-router";
-import {ROUTES} from "../../shared/routes.ts";
+import type { FieldType } from '@/features/Login/model/types.ts';
+import { loginUser } from '@/features/Login/model/slice.ts';
+import { useAppDispatch } from '@/shared/hooks.ts';
+import { ROUTES } from '@/shared/routes.ts';
+import s from '@/features/Login/Login.module.scss';
 
 function Login() {
   const dispatch = useAppDispatch();
@@ -43,7 +43,7 @@ function Login() {
             className={s.field}
             label="Логин"
             name="username"
-            layout='vertical'
+            layout="vertical"
             rules={[{ required: true, message: 'Введите свой логин!' }]}
           >
             <Input
@@ -56,7 +56,7 @@ function Login() {
           <Form.Item<FieldType>
             label="Пароль"
             name="password"
-            layout='vertical'
+            layout="vertical"
             rules={[{ required: true, message: 'Введите пароль!' }]}
             className={s.field}
           >

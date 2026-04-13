@@ -1,7 +1,7 @@
-import { useAppDispatch, useAppSelector } from '../../shared/hooks.ts';
-import s from './UserButtons.module.scss';
 import { Button } from 'antd';
-import { logout } from '../../features/Login/model/slice.ts';
+import { logout } from '@/features/Login/model/slice.ts';
+import { useAppDispatch, useAppSelector } from '@/shared/hooks.ts';
+import s from '@/widgets/UserButtons/UserButtons.module.scss';
 
 function UserButtons() {
   const { user } = useAppSelector((state) => state.auth);
